@@ -3,76 +3,114 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
-* {
-box-sizing: border-box;
-}
-[class*="col-"] {
-width: 100%;
-float: left;
-padding: 15px;
-}
-@media only screen and (min-width: 768px) {
-/* For desktop: */
-.col-1 {width: 50%;}
-.col-2 {width: 100%;}
-}
 .domain::before {
   content: "\0040";    /* Unicode character for @ symbol */
 }
 
-img {
-max-width: 80%;
-height: auto;
-border: none;
-border-radius: 50%;
+* {
+    box-sizing: border-box;
 }
+
+@font-face {
+   font-family: 'Oswald' sans-serif;
+   src: url(Oswald-Bold.ttf);
+}
+
+@font-face {
+   font-family: 'Montserrat' sans-serif;
+   src: url(Montserrat-Regular.ttf);
+}
+
+@font-face {
+   font-family: 'Montserrat' sans-serif;
+   src: url(Montserrat-Bold.ttf);
+   font-weight: bold;
+}
+
+@font-face {
+	font-family: "Source Sans";
+	src: url(SourceSansPro-Regular.ttf);	
+}
+
+[class*="col-"] {
+    width: 100%;
+	float: left;
+	padding-top 3em;
+}
+@media only screen and (min-width: 768px) {
+    /* For desktop: */
+    .col-1 {width: 50%;}
+    .col-2 {width: 100%;}
+}
+img {
+	max-width: 80%;
+	height: auto;
+	border: none;
+	border-radius: 50%;
+}
+
 h1 {
-border-style: none;
-font-family: "Courier New",Courier,monospace;
-font-size: 2.5em;
-font-weight: bold;
-color: white;
-text-transform: lowercase;
-font-style: normal;
-text-align: center;
-background-color: #666666;
+	border-style: none;
+	font-family: "Oswald";
+	font-size: 4em;
+	color: #03A9F4;
+	text-transform: uppercase;
+	font-style: normal;
+	text-align: center;
+	background-color: white;
+	text-shadow: 2px 2px 0px #FFFFFF, 5px 5px 0px #8BC34A;
+	line-height: 100%;
+	padding-bottom:0em;
+	-webkit-margin-before: 0.67em;
+    -webkit-margin-after: 0.67em;
+
 }
 h2 {
-border-style: none;
-font-family: "Courier New",Courier,monospace;
-font-size: 1em;
-font-weight: bold;
-font-style: normal;
-text-transform: lowercase;
-text-align: center;
-background-color: #666666;
-color: white;
+	border-style: none;
+	font-family: "Montserrat";
+	font-size: 1em;
+	font-weight: normal;
+	font-style: normal;
+	text-transform: uppercase;
+	text-align: center;
+	background-color: white;
+	color: #212121;
+	padding:none;
+	-webkit-margin-before: 0.67em;
+    -webkit-margin-after: 3em;
 }
 body {
-background-color: #666666;
-font-family: "Courier New",Courier,monospace;
-color: white;
-font-size: 1em;
-text-align: center;
-font-weight: normal;
-font-style: normal;
-text-transform: none;
+	background-color: white;
+	font-family: "Source Sans";
+	color: #212121;
+	font-size: 1em;
+	text-align: center;
+	font-weight: normal;
+	font-style: normal;
+	text-transform: none;
 }
 div.fixed {
-position: fixed;
-bottom: 0;
-right: 0;
-width: 100px;
-border: none;
-font-size:0.6em;
-color:white;
-background-color:none;
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	width: 100px;
+	border: none;
+	font-size:0.6em;
+	color:#212121;
+	background-color:none;
 }
 a:link, a:visited, a:hover, a:active {
-text-decoration: none;
-color:white;
-background-color:#666666;
+	text-decoration: none;
+	color:#212121;
+	background-color:white;
 }
+
+p {
+	padding-left:3em;
+	padding-right:3em;
+}
+
+
 </style><title>danny makes things work</title>
 
 <style type="text/css"></style>
@@ -83,12 +121,12 @@ background-color:#666666;
 <div class="col-1"> <img style="width:50%; height:50%;" alt="me" src="me.jpg" align="middle">
 </div>
 <div class="col-1">
-<h2>I'm Danny</h2>
-<p>By day, I work as an engineer designing things for the
-entertainment industry. By night, I make things and write code, often
-for no real reason. Sometimes these two things overlap, and I end up
-making and coding entertaining things. You can see examples of what I
-get up to on my github and blog.</p>
+<h2>I'm Danny.</h2>
+<p>Most of the time, I work as an engineer designing things for the
+entertainment industry. Alongside this, I make things and write code, often
+for no real reason. You can see examples of what I
+get up to on my <a href="http://github.com./walkerdanny/">github</a> and <a href="http://blog.makesthings.work">blog</a>.</p>
+<p>I enjoy exploring the intersection between electronics, engineering and the arts. </p>
 <p>If you'd like to get in touch, you can email me at danny<span class="domain">makesthings.work</span></p>
-<a href="index.html"><img style="width:20%; height:15%;" alt="up" src="level.png" align="middle"></a></div>
+<a href="index.html"><img style="width:20%; height:auto;" alt="up" src="level.png" align="middle"></a></div>
 </body></html>

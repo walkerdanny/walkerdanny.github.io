@@ -8,9 +8,31 @@
     box-sizing: border-box;
 }
 
+@font-face {
+   font-family: 'Oswald' sans-serif;
+   src: url(Oswald-Bold.ttf);
+}
+
+@font-face {
+   font-family: 'Montserrat' sans-serif;
+   src: url(Montserrat-Regular.ttf);
+}
+
+@font-face {
+   font-family: 'Montserrat' sans-serif;
+   src: url(Montserrat-Bold.ttf);
+   font-weight: bold;
+}
+
+@font-face {
+	font-family: "Source Sans";
+	src: url(SourceSansPro-Regular.ttf);	
+}
+
 [class*="col-"] {
     width: 100%;
 	float: left;
+	padding-top 3em;
 }
 @media only screen and (min-width: 768px) {
     /* For desktop: */
@@ -23,39 +45,48 @@ img {
     max-width: 80%;
     height: auto;
 	border: 0px solid
+	
 }
 
 h1 {
 	border-style: none;
-	font-family: "Courier New",Courier,monospace;
-	font-size: 2.5em;
-	font-weight: bold;
-	color: white;
-	text-transform: lowercase;
+	font-family: "Oswald";
+	font-size: 4em;
+	color: #03A9F4;
+	text-transform: uppercase;
 	font-style: normal;
 	text-align: center;
-	background-color: #666666;
+	background-color: white;
+	text-shadow: 2px 2px 0px #FFFFFF, 5px 5px 0px #8BC34A;
+	line-height: 100%;
+	padding-bottom:0em;
+	-webkit-margin-before: 0.67em;
+    -webkit-margin-after: 0.2em;
 }
 h2 {
 	border-style: none;
-	font-family: "Courier New",Courier,monospace;
+	font-family: "Montserrat";
 	font-size: 1em;
-	font-weight: bold;
+	font-weight: normal;
 	font-style: normal;
-	text-transform: lowercase;
+	text-transform: uppercase;
 	text-align: center;
-	background-color: #666666;
-	color: white;
+	background-color: white;
+	color: #212121;
+	-webkit-margin-before: 0.67em;
+    -webkit-margin-after: 3em;
+
 }
 body {
-	background-color: #666666;
-	font-family: "Courier New",Courier,monospace;
-	color: white;
+	background-color: white;
+	font-family: "Source Sans";
+	color: #212121;
 	font-size: 1em;
 	text-align: center;
 	font-weight: normal;
 	font-style: normal;
 	text-transform: none;
+	padding:none;
 }
 div.fixed {
 	position: fixed;
@@ -64,33 +95,33 @@ div.fixed {
 	width: 100px;
 	border: none;
 	font-size:0.6em;
-	color:white;
+	color:#212121;
 	background-color:none;
 }
 a:link, a:visited, a:hover, a:active {
 	text-decoration: none;
-	color:white;
-	background-color:#666666;
+	color:#212121;
+	background-color:white;
 }
-</style><title>danny makes things work</title>
+</style><title>Danny makes things work.</title>
 
 <style type="text/css"></style>
 </head>
 
 <body>
-<h1>Danny makes things work</h1>
-<h2>sometimes</h2>
+<h1>Danny makes things work.</h1>
+<h2 style="font-size:0.75em">Including this.</h2>
 <div class="col-1">
-	<a href="http://github.com/walkerdanny/"><img alt="my github" src="github.png" align="middle"></a>
+	<a href="http://github.com/walkerdanny/"><img alt="my blog" src="github.png" align="middle" size><h2>Codes</h2></a>
 </div>
 <div class="col-1">
-	<a href="http://blog.makesthings.work/"><img alt="my blog" src="blog.png" align="middle"></a>
+	<a href="http://blog.makesthings.work/"><img alt="my blog" src="blog.png" align="middle"><h2>Blogs</h2></a>
 </div>
 <div class="col-1">
-	<a href="http://twitter.com/walkerdanny"><img alt="my twitter" title="my twitter" src="twitter.png" align="middle"></a>
+	<a href="http://twitter.com/walkerdanny"><img alt="my twitter" title="my twitter" src="twitter.png" align="middle"><h2>Tweets</h2></a>
 </div>
 <div class="col-1">
-	<a href="me.html"><img alt="me" title="my twitter" src="user77.png" align="middle"></a>
+	<a href="me.html"><img alt="me" title="my twitter" src="user77.png" align="middle"><h2>Me</h2></a>
 </div>
 <div class="fixed">icons by <a href="http://fontawesome.io/">Dave Gandy</a>
 </div>

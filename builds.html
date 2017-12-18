@@ -1,11 +1,14 @@
 <!DOCTYPE html>
-<html>
-<head>
+<html><head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link href='http://blog.makesthings.work/favicon.ico' rel='icon' type='image/x-icon'/>
 <link href='https://fonts.googleapis.com/css?family=Oswald:700|Montserrat:400,700|Open+Sans' rel='stylesheet' type='text/css'>
 <style>
+.domain::before {
+  content: "\0040";    /* Unicode character for @ symbol */
+}
+
 * {
     box-sizing: border-box;
 }
@@ -17,16 +20,14 @@
 }
 @media only screen and (min-width: 768px) {
     /* For desktop: */
-    .col-1 {width: 25%;}
-    .col-2 {width: 50%;}
-    .col-3 {width: 75%;}
-	.col-4 {width: 100%;}
+    .col-1 {width: 50%;}
+    .col-2 {width: 100%;}
 }
 img {
-    max-width: 80%;
-    height: auto;
-	border: 0px solid
-
+	max-width: 80%;
+	height: auto;
+	border: none;
+	border-radius: 50%;
 }
 
 h1 {
@@ -42,7 +43,8 @@ h1 {
 	line-height: 100%;
 	padding-bottom:0em;
 	-webkit-margin-before: 0.67em;
-    -webkit-margin-after: 0.2em;
+    -webkit-margin-after: 0.67em;
+
 }
 h2 {
 	border-style: none;
@@ -54,9 +56,9 @@ h2 {
 	text-align: center;
 	background-color: white;
 	color: #212121;
+	padding:none;
 	-webkit-margin-before: 0.67em;
     -webkit-margin-after: 3em;
-
 }
 body {
 	background-color: white;
@@ -67,7 +69,6 @@ body {
 	font-weight: normal;
 	font-style: normal;
 	text-transform: none;
-	padding:none;
 }
 div.fixed {
 	position: fixed;
@@ -80,31 +81,35 @@ div.fixed {
 	background-color:none;
 }
 a:link, a:visited, a:hover, a:active {
-	text-decoration: none;
+	text-decoration: underline;
 	color:#212121;
 	background-color:white;
 }
-</style><title>Danny makes things work.</title>
+
+p {
+	padding-left:3em;
+	padding-right:3em;
+}
+
+
+</style><title>danny makes things work</title>
 
 <style type="text/css"></style>
 </head>
 
 <body>
-<h1>Danny makes things work.</h1>
-<h2 style="font-size:0.75em">Including this.</h2>
-<div class="col-1">
-	<a href="http://github.com/walkerdanny/"><img alt="my blog" src="github.png" align="middle" size><h2>Codes</h2></a>
+<h1>Builds</h1>
+<h2>Or some of them, at least.</h2>
+<div class="col-1"> <a href="wordsearch.html"><img style="width:50%; height:50%;" alt="Wordsearch Clock" src="wordclock1.jpg" align="middle">
+  <h2>
+    Wordsearch Clock
+  </h2></a>
 </div>
-<div class="col-1">
-	<a href="builds.html"><img alt="my builds" src="blog.png" align="middle"><h2>Builds</h2></a>
+<div class="col-1"> <a href="headphones.html"><img style="width:50%; height:50%;" alt="DIY Bluetooth Headphones" src="headphones1.jpg" align="middle">
+  <h2>
+    DIY Bluetooth Headphones
+  </h2></a>
 </div>
-<div class="col-1">
-	<a href="http://twitter.com/walkerdanny"><img alt="my twitter" title="my twitter" src="twitter.png" align="middle"><h2>Tweets</h2></a>
+<a href="index.html"><img style="width:20%; height:auto;" alt="up" src="level.png" align="middle"></a>
 </div>
-<div class="col-1">
-	<a href="me.html"><img alt="me" title="my twitter" src="user77.png" align="middle"><h2>Me</h2></a>
-</div>
-<div class="fixed">icons by <a href="http://fontawesome.io/">Dave Gandy</a>
-</div>
-</body>
-</html>
+</body></html>

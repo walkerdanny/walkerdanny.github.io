@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href='http://blog.makesthings.work/favicon.ico' rel='icon' type='image/x-icon'/>
+<link href='https://fonts.googleapis.com/css?family=Oswald:700|Montserrat:400,700|Open+Sans' rel='stylesheet' type='text/css'>
+<style>
+.domain::before {
+  content: "\0040";    /* Unicode character for @ symbol */
+}
+
+* {
+    box-sizing: border-box;
+}
+
+[class*="col-"] {
+    width: 100%;
+	float: left;
+	padding-top 3em;
+}
+@media only screen and (min-width: 768px) {
+    /* For desktop: */
+    .col-1 {width: 50%;}
+    .col-2 {width: 100%;}
+}
+img {
+	max-width: 90%;
+	height: auto;
+	border: none;
+	border-radius: 2%;
+}
+
+h1 {
+	border-style: none;
+	font-family: "Oswald";
+	font-size: 4em;
+	color: #03A9F4;
+	text-transform: uppercase;
+	font-style: normal;
+	text-align: center;
+	background-color: white;
+	text-shadow: 2px 2px 0px #FFFFFF, 5px 5px 0px #8BC34A;
+	line-height: 100%;
+	padding-bottom:0em;
+	-webkit-margin-before: 0.67em;
+    -webkit-margin-after: 0.67em;
+}
+h2 {
+	border-style: none;
+	font-family: "Montserrat";
+	font-size: 1em;
+	font-weight: normal;
+	font-style: normal;
+	text-transform: uppercase;
+	text-align: center;
+	background-color: white;
+	color: #212121;
+	padding:none;
+	-webkit-margin-before: 0.67em;
+    -webkit-margin-after: 1em;
+}
+body {
+	background-color: white;
+	font-family: "Open Sans";
+	color: #212121;
+	font-size: 1em;
+	text-align: center;
+	font-weight: normal;
+	font-style: normal;
+	text-transform: none;
+}
+div.fixed {
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	width: 100px;
+	border: none;
+	font-size:0.6em;
+	color:#212121;
+	background-color:none;
+}
+a:link, a:visited, a:hover, a:active {
+	text-decoration: underline;
+	color:#212121;
+	background-color:white;
+}
+
+p {
+	padding-left:3em;
+	padding-right:3em;
+}
+
+
+</style><title>danny makes things work</title>
+
+<style type="text/css"></style>
+</head>
+
+<body>
+<h1>DIY Bluetooth Headphones</h1>
+<div class="col-1">
+  <img style="width:90%; height:90%;" alt="Bluetooth HD-25's" src="headphones1.jpg" align="middle"><p/>
+  <img style="width:90%; height:90%;" alt="Bluetooth HD-25's" src="headphones2.jpg" align="middle"><p/>
+  <img style="width:90%; height:90%;" alt="Bluetooth HD-25's" src="headphones3.jpg" align="middle"></a><p/>
+
+</div>
+<div class="col-1">
+<h2>The Problem</h2>
+<p>I've owned my pair of Sennheiser HD-25 MKII headphones for over 5 years at the time of writing. In that time, they've become my absolute reference for what music should sound like. Listening on anything else, even something higher quality or ten times the price, just doesn't sound right.</p>
+<p>This caused a bit of a problem when I finally ditched my iPhone for a Google Pixel 2, as Google decided (to much derision) to ditch the 3.5mm headphone jack! I wasn't willing to part with my favourite pair of headphones, and the USB-C -> 3.5mm adapter that comes with the Pixel 2 is pretty flaky in terms of reliability and ruggedness.</p>
+<p>I needed some way of using my HD-25s with the Pixel 2, without totally wrecking the headphones.<p>
+<h2>The Solution</h2>
+  <p>It seemed like the obvious solution would be to somehow turn the wired headphones into Bluetooth ones! This has a couple of issues though. Firstly, the HD-25s aren't exactly cheap, so ideally any conversion would need to be completely reversible, meaning no holes in the earcups etc. Secondly, Bluetooth headphones aren't the simplest of things to build, so bootstrapping a pair myself would probably be off the table as it would be too time consuming and expensive.</p>
+  <p>Part of the beauty of the design of the HD-25s (and the reason they're favoured by technicians and DJs worldwide) is that all the parts are user-replaceable. This is a rare blessing in the world of cosumer electronics these days, and makes them perfectly hackable for a project like this.
+  Of course, Sennheiser's intent in designing them this way was always that you'd replace anything that breaks with their OEM parts, and they'd charge you through the nose for them. Unfortunately for Sennheiser, <a href="https://www.aliexpress.com/item/Super-Soft-5N-OFC-Cable-For-Senheiser-HD25-1-SP-HD650-HD600-HD580-HD525-HD565-Headphone/32814067220.html">AliExpress sellers have other ideas.</a></p>
+  <p>So now I'd discovered that replacement parts can be bought fairly cheaply, I could start thinking about Bluetooth. I wanted a premade, LiPo battery powered Bluetooth module that was small enough to fit in the regular footprint of the headphones (no big boxes hanging off the side), cheap enough that I wouldn't have to worry about hacking it, and high quality enough that it wouldn't ruin the sound quality of the heaphones.
+  This led me to the <a href="https://www.aliexpress.com/item/Mpow-wireless-bluetooth-receiver-Black-Portable-3-5-mm-Stereo-Output-Bluetooth-4-1-Audio-Streaming/32595564019.html">Mpow Streambot Mini</a>. At <£10, it wouldn't break the bank much if I broke it, and it supports A2DP so I figured the quality would be acceptable.</p>
+  <p>I ordered this, and one of the cables linked above, and began the long wait for the slow boat from China to arrive.<p>
+<h2>The Build</h2>
+  <p>When everything arrived, I plugged everything together and tried it out. The Streambot Mini had a surprisingly small design, and the sound quality was pretty much on par with listening via the USB-C adapter! The design of the cable was a little weird, as it didn't match the design of the original HD-25 cable. I'm not sure how you're supposed to use it, but it's definitely not a drop-in replacement. This wasn't too important here though as I was going to chop it up anyway.</p>
+  <p>Next, I cracked open the Streambot Mini to see what was going on inside. It's based around the <a href="https://www.microchip.com/wwwproducts/en/IS2020">Microchip IS2020 Stereo Audio Chip.</a> This is nice to see, as opposed to some random unidentified knockoff. A glance at the datasheet reveals that this one chip handles pretty much everything, including the Bluetooth stack, Class D audio amplifier, battery charging and power regulation. Super cool! I didn't have much reason to do any low-level hacking of the device, but I did note that underneath the battery there were a lot of handy-looking test pads provided, so I imagine the UART is on these somewhere.</p>
+  <p>I knew I wanted to break out the audio output from the 3.5mm jack so I traced the pinout, made a note of it and desoldered it. I then cut up the headphone cable and soldered the earcup plugs onto the audio output. I decided at this point it would be cool to have play/pause and skip controls, so I stripped some old enameled headphone wire and carefully soldered it to the corresponding button connections. Once I tested everything, I doused it in epoxy for strain relief and closed the case back up. All the wires exit through the hole that the 3.5mm jack used to occupy.</p>
+  <p>On the back of the HD-25 ear cups, there are small squares of plastic, one of which provides strain relief for the headphone cable and the other which is purely aesthetic. I took these off my headphones, revealing a shallow space underneath of approx. 12mm x 13mm. A rummage through my parts box revealed some 12mm square tactile buttons that fit in this hole nicely, so they were soldered to the ends of the button wires I'd prepared earlier and glued in place.</p>
+  <p>Once everything was soldered up, the last thing to do was mount the Streambot Mini. Testing various positions earlier on (when the cables were longer) led to me deciding to put the Streambot inside the heaphone band, as it doesn't make contact with my head and is comfortable, without looking weird. Currently I've mounted this with some black PVC tape, which isn't great, but I don't mind too much. At some point I might replace it with adhesive velcro, but for now I'm not putting velcro where my hair is.</p>
+  <p>The final result is that I can use my favourite headphones with my phone wirelessly! The music quality is great and the battery life so far is around 10 hours of play time.
+  <p>That's pretty much it! Apologies for the lack of in-progress photos, the whole thing came together in an afternoon and I forgot to document it as I went. If you have any questions, feel free to send me an email at the address <a href = "me.html">here.</a></p>
+  <p>Note: <a href="https://www.aliexpress.com/item/Bluetooth-Wireless-Audio-Wireless-Earphone-Cable-For-Senheiser-HD25-HD650-HD600-HD580-HD525-LN005862/32831908373.html">You can actually buy this as a commercial product!</a> These have come down in price since I did this to the point where DIY'ing only saves you about £10. I haven't tried them out and can't vouch for their quality at all, but they look quite good and allegedly support Bluetooth 4.2. If you buy one and use it, drop me an email to let me know how it is!</p>
+<p><a href="index.html"><img style="width:10%; height:auto;" alt="up" src="level.png" align="middle"></a></p>
+</div>
+</body></html>

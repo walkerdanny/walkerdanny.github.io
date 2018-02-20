@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href='http://blog.makesthings.work/favicon.ico' rel='icon' type='image/x-icon'/>
+<link href='https://fonts.googleapis.com/css?family=Oswald:700|Montserrat:400,700|Open+Sans' rel='stylesheet' type='text/css'>
+<style>
+.domain::before {
+  content: "\0040";    /* Unicode character for @ symbol */
+}
+
+* {
+    box-sizing: border-box;
+}
+
+[class*="col-"] {
+    width: 100%;
+	float: left;
+	padding-top 3em;
+}
+@media only screen and (min-width: 768px) {
+    /* For desktop: */
+    .col-1 {width: 50%;}
+    .col-2 {width: 100%;}
+}
+img {
+	max-width: 90%;
+	height: auto;
+	border: none;
+	border-radius: 2%;
+}
+
+h1 {
+	border-style: none;
+	font-family: "Oswald";
+	font-size: 4em;
+	color: #03A9F4;
+	text-transform: uppercase;
+	font-style: normal;
+	text-align: center;
+	background-color: white;
+	text-shadow: 2px 2px 0px #FFFFFF, 5px 5px 0px #8BC34A;
+	line-height: 100%;
+	padding-bottom:0em;
+	-webkit-margin-before: 0.67em;
+    -webkit-margin-after: 0.67em;
+}
+h2 {
+	border-style: none;
+	font-family: "Montserrat";
+	font-size: 1em;
+	font-weight: normal;
+	font-style: normal;
+	text-transform: uppercase;
+	text-align: center;
+	background-color: white;
+	color: #212121;
+	padding:none;
+	-webkit-margin-before: 0.67em;
+    -webkit-margin-after: 1em;
+}
+body {
+	background-color: white;
+	font-family: "Open Sans";
+	color: #212121;
+	font-size: 1em;
+	text-align: center;
+	font-weight: normal;
+	font-style: normal;
+	text-transform: none;
+}
+div.fixed {
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	width: 100px;
+	border: none;
+	font-size:0.6em;
+	color:#212121;
+	background-color:none;
+}
+a:link, a:visited, a:hover, a:active {
+	text-decoration: underline;
+	color:#212121;
+	background-color:white;
+}
+
+p {
+	padding-left:3em;
+	padding-right:3em;
+}
+
+
+</style><title>danny makes things work</title>
+
+<style type="text/css"></style>
+</head>
+
+<body>
+<h1>Pendulum Bowl Generator</h1>
+<div class="col-1">
+  <img style="width:90%; height:90%;" alt="Pendulum Bowl Generator" src="pendulum1.jpg" align="middle"><p/>
+  <img style="width:90%; height:90%;" alt="Pendulum Bowl Generator" src="pendulum2.jpeg" align="middle"><p/>
+  <img style="width:90%; height:90%;" alt="Pendulum Bowl Generator" src="pendulum3.jpg" align="middle"></a><p/>
+
+</div>
+<div class="col-1">
+<h2>The Idea</h2>
+  <p>Recently, I've been playing around with combining generative data with 3D printing using Python and OpenSCAD. One project I'm doing this for is working with image processing to generate 3D models from 2D photos. I hit kind of a rut with it though, and wanted a quick little project that would generate some cool results quickly.</p>
+  <p>Watching <a href="https://www.youtube.com/watch?v=uWzPe_S-RVE">The Coding Train</a>, where <a href="https://www.twitter.com/shiffman">Daniel Shiffman</a> live codes solutions to some cool computer science problems, I got to thinking that a spherical pendulum would be an interesting way of generating a 3D dataset, and the results would look something like a bowl.</p>
+  <p>I figured I could probably implement this quite easily, especially since I have experience of simulating oscillating systems from my degree, so I gave it a shot and it turned out to be pretty simple!</p>
+<h2>The Solution</h2>
+  <p>I wrote a Python script that implements the equations of motion of a spherical pendulum. It makes some simplifications, since spherical pendulums are numerically unstable at small angles. The effect of these assumptions are minimal though, and the accuracy of the simulation isn't all that important. What matters is that the output looks cool!</p>
+  <p>The solutions to the equations of motion are iterated for a number of time steps, resulting in an array of 3D coordinates which represent the path that the bob of the pendulum took. The script then generates an OpenSCAD file which draws a sphere at each of these coordinates, and performs a hull() command between them. The size of the sphere can be proportional to the velocity of the pendulum, for a cool added effect!</p>
+  <p>The resultant OpenSCAD file is then opened, rendered and an STL file is generated for 3D printing.</p>
+<h2>Results</h2>
+  <p>Some examples of objects the script has generated can be seen to the left of this page, and the STL files are on my <a href="https://github.com/walkerdanny/Pendulum_Bowl">Github</a>.</p>
+  <p>Some nice effects can be achieved when printing in gradient filament!</p>
+  <p>I might turn this into a Twitter bot, to run the simulation with random parameters and generate STLs which get uploaded to Thingiverse with a preview. Watch this space!</p>
+<p><a href="builds.html"><img style="width:10%; height:auto;" alt="up" src="level.png" align="middle"></a></p>
+</div>
+</body></html>

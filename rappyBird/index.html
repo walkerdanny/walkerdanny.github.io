@@ -10,6 +10,7 @@
 <script language="javascript" type="text/javascript" src="sketch.js"></script>
 <script language="javascript" type="text/javascript" src="bird.js"></script>
 <script language="javascript" type="text/javascript" src="pipe.js"></script>
+<link href="https://fonts.googleapis.com/css?family=VT323" rel="stylesheet">
 <style>
 .domain::before {
   content: "\0040";    /* Unicode character for @ symbol */
@@ -95,29 +96,25 @@ p {
 	padding-right:3em;
 }
 
-</style><title>danny makes things work</title>
+</style><title>Rappy Bird</title>
 
 <style type="text/css"></style>
 </head>
 
 <body>
 <h1>Rappy Bird</h1>
-<div class="col-1">
+<div class="col-1" id="leftColumn">
+  <h2>Instructions</h2>
+    <p>Rappy Bird is pretty much the same as Flappy Bird, except you're simultaneously trying to make a hip hop beat.</p>
+    <p>Use the keyboard keys E to I and D to J to make the bird jump and play different drum sounds.</p>
+    <p>Open up a <a href="https://www.youtube.com/playlist?list=PLzXbmIDC00LnOms1Xoxdm_kngDrIvLfbg">rap acapella</a> at the same time to give you something to jam along with.</p>
+    <p>If you're having to use far too many or too few drum hits just to stay alive, the slider at the bottom adjusts the gravity.</p>
+    <p>The "Download last beat" button is kind of bodged and probably won't work first time, but should be OK afterwards.</p>
 
+  <h2>Sources</h2>
+    <p>I'm heavily indebted to <a href="http://twitter.com/shiffman">Daniel Shiffman</a> for the <a href="https://github.com/CodingTrain/Flappy-Bird-Clone">implementation of Flappy Bird</a> in p5.js, apologies for butchering your work so much.</p>
+    <p>The samples were taken from <a href="http://freesound.org">freesound.org</a>. Full list of samples <a href="list.txt">here</a>.</p>
 </div>
-<div class="col-1" id="left">
-<h2>The Idea</h2>
-  <p>Recently, I've been playing around with combining generative data with 3D printing using Python and OpenSCAD. One project I'm doing this for is working with image processing to generate 3D models from 2D photos. I hit kind of a rut with it though, and wanted a quick little project that would generate some cool results quickly.</p>
-  <p>Watching <a href="https://www.youtube.com/watch?v=uWzPe_S-RVE">The Coding Train</a>, where <a href="https://www.twitter.com/shiffman">Daniel Shiffman</a> live codes solutions to some cool computer science problems, I got to thinking that a spherical pendulum would be an interesting way of generating a 3D dataset, and the results would look something like a bowl.</p>
-  <p>I figured I could probably implement this quite easily, especially since I have experience of simulating oscillating systems from my degree, so I gave it a shot and it turned out to be pretty simple!</p>
-<h2>The Solution</h2>
-  <p>I wrote a Python script that implements the equations of motion of a spherical pendulum. It makes some simplifications, since spherical pendulums are numerically unstable at small angles. The effect of these assumptions are minimal though, and the accuracy of the simulation isn't all that important. What matters is that the output looks cool!</p>
-  <p>The solutions to the equations of motion are iterated for a number of time steps, resulting in an array of 3D coordinates which represent the path that the bob of the pendulum took. The script then generates an OpenSCAD file which draws a sphere at each of these coordinates, and performs a hull() command between them. The size of the sphere can be proportional to the velocity of the pendulum, for a cool added effect!</p>
-  <p>The resultant OpenSCAD file is then opened, rendered and an STL file is generated for 3D printing.</p>
-<h2>Results</h2>
-  <p>Some examples of objects the script has generated can be seen to the left of this page, and the STL files are on my <a href="https://github.com/walkerdanny/Pendulum_Bowl">Github</a>.</p>
-  <p>Some nice effects can be achieved when printing in gradient filament!</p>
-  <p>I also turned this into a <a href="https://twitter.com/PendulumBot">Twitter bot</a>, which tweets a randomised "bowl" once per day! More info <a href="twitterbots.html">here</a>.</p>
-<p><a href="builds.html"><img style="width:10%; height:auto;" alt="up" src="img/level.png" align="middle"></a></p>
+<div class="col-1" id="rightColumn">
 </div>
 </body></html>

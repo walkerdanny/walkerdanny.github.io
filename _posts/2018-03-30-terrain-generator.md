@@ -1,6 +1,6 @@
 ---
 title: "Terrain Model Generator"
-date: 2017-03-30
+date: 2018-03-30
 tags: [3d printing, art, Python]
 header:
   teaser: "/img/teasers/terrain.jpg"

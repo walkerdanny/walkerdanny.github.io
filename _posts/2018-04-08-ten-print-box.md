@@ -1,6 +1,6 @@
 ---
 title: "10 Print Box"
-date: 2017-04-08
+date: 2018-04-08
 tags: [10 Print, art, electronics, arduino, 3d printing]
 header:
   teaser: "/img/teasers/10print.jpg"

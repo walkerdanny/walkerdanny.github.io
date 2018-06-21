@@ -1,6 +1,6 @@
 ---
 title: "Twitter Bots"
-date: 2017-04-06
+date: 2018-04-06
 tags: [twitter, art, generative]
 header:
   teaser: "/img/teasers/twitterbot.jpg"

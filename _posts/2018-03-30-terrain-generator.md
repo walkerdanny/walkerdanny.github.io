@@ -18,7 +18,7 @@ This led to the creation of a tool that takes two GPS coordinates as inputs, and
 
 The core of the tool is a Python script, with a HTML/JS front end.
 
-<img src="{{ site.url }}{{ site.baseurl }}/img/terrainUI.png" alt="Terrain Generator UI">
+<img src="{{ site.url }}{{ site.baseurl }}/img/terrainUI.PNG" alt="Terrain Generator UI">
 
 The front end has an embedded map, which the user draws a rectangle on, enclosing the area they want a model of. Some optional parameters are available which perform some transformations on the data so that the model is a reasonable shape. The GPS coordinates of the bounding rectangle, along with the other parameters, are then sent over a WebSocket connection to the Python script.
 
